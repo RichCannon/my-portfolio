@@ -1,10 +1,20 @@
-
+import FloatingNavbar from "@/components/FloatingNavbar";
+import { FloatingNavItem } from "@/components/FloatingNavbar/FloatingNavbar.types";
+import Grid from "@/components/Grid";
+import Hero from "@/components/Hero/Hero";
+import { FaHome } from "react-icons/fa";
 
 export default function Home() {
+  const navItems: FloatingNavItem[] = [
+    { name: "Home", link: "/", icon: <FaHome /> },
+  ];
+
   return (
-    <main className="relative">
-      <div>
-        <h1>My Portfolio</h1>
+    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10">
+      <div className="max-w-7xl w-full">
+        <FloatingNavbar navItems={navItems} />
+        <Hero />
+        <Grid />
       </div>
     </main>
   );
