@@ -1,8 +1,15 @@
+export const NAV_ITEMS_IDS = {
+  ABOUT: "about",
+  PROJECTS: "projects",
+  TESTIMONIALS: "testimonials",
+  CONTACT: "contact",
+};
+
 export const navItems = [
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
-  { name: "Contact", link: "#contact" },
+  { name: "About", link: `#${NAV_ITEMS_IDS.ABOUT}` },
+  { name: "Projects", link: `#${NAV_ITEMS_IDS.PROJECTS}` },
+  { name: "Testimonials", link: `#${NAV_ITEMS_IDS.TESTIMONIALS}` },
+  { name: "Contact", link: `#${NAV_ITEMS_IDS.CONTACT}` },
 ];
 
 export const MY_EMAIL = "syndicateua@gmail.com";

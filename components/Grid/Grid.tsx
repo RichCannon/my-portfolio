@@ -1,7 +1,7 @@
 import React from "react";
 import BentoGrid from "../ui/BentoGrid";
 import BentoGridItem from "../ui/BentoGridItem";
-import { gridItems } from "@/data";
+import { gridItems, NAV_ITEMS_IDS } from "@/data";
 
 const Grid = () => {
   const aboutSectionChilds = gridItems.map((item) => (
@@ -9,7 +9,7 @@ const Grid = () => {
   ));
 
   return (
-    <section id="about">
+    <section id={NAV_ITEMS_IDS.ABOUT}>
       <BentoGrid className="w-full py-20">{aboutSectionChilds}</BentoGrid>
     </section>
   );
