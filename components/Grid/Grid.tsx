@@ -9,7 +9,7 @@ const Grid = () => {
   ));
 
   return (
-    <section id={NAV_ITEMS_IDS.ABOUT}>
+    <section className="px-3 md:px-0" id={NAV_ITEMS_IDS.ABOUT}>
       <BentoGrid className="w-full py-20">{aboutSectionChilds}</BentoGrid>
     </section>
   );

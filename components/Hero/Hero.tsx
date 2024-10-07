@@ -16,7 +16,7 @@ export const Hero: FC = ({}) => {
   ];
 
   return (
-    <div className="pb-20 pt-36">
+    <section className="md:pb-20 pb-10 md:pt-36 pt-28 px-3 md:px-0">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -34,7 +34,7 @@ export const Hero: FC = ({}) => {
         </div>
       </div>
       <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60wv] flex flex-col items-center justify-center">
+        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
             Dynamic web magic with next.js
           </h2>
@@ -46,13 +46,17 @@ export const Hero: FC = ({}) => {
             Hi, I&apos;m Volodymyr, a Next.js developer
           </p>
           <a href="#about">
-            <ButtonBorderMagic position="right" icon={<FaLocationArrow />}>
+            <ButtonBorderMagic
+              position="right"
+              icon={<FaLocationArrow />}
+              buttonClassName="md:mt-10"
+            >
               Show My Work
             </ButtonBorderMagic>
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

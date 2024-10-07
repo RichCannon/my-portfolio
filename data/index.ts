@@ -13,6 +13,9 @@ export const navItems = [
 ];
 
 export const MY_EMAIL = "syndicateua@gmail.com";
+export const MY_FIRST_NAME = "Volodymyr";
+export const MY_LAST_NAME = "Kucher";
+export const MY_FULL_NAME = `${MY_FIRST_NAME} ${MY_LAST_NAME}`;
 
 export const gridItems = [
   {
@@ -212,15 +215,18 @@ export const workExperience = [
 
 export const socialMedia = [
   {
-    id: 1,
+    name: "Github",
     img: "/git.svg",
+    href: "https://github.com/RichCannon",
   },
   {
-    id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
+    name: "Linkedin",
     img: "/link.svg",
+    href: "https://www.linkedin.com/in/richcannon4",
+  },
+  {
+    name: "Telegram",
+    img: "/telegram.svg",
+    href: "https://t.me/Volod_K",
   },
 ];

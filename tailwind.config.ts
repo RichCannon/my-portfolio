@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import svgToDataUri from "mini-svg-data-uri";
+//@ts-ignore
 import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
 import { default as tailwindcssAnimatePlugin } from "tailwindcss-animate";
 
@@ -24,6 +25,9 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "moving-border": "radial-gradient(#CBACF9 40%, transparent 60%)",
+      },
       colors: {
         black: {
           DEFAULT: "#000",

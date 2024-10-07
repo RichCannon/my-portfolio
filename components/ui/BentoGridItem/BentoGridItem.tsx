@@ -3,7 +3,6 @@ import { memo } from "react";
 import { BentoGridItemProps } from "./BentoGridItem.types";
 import BGGradientAnimation from "../BGGradientAnimation";
 import GridGlobe from "../GridGlobe/GridGlobe";
-import Lottie from "react-lottie";
 import EmailCopyButton from "../EmailCopyButton";
 
 const GRADIENT_STYLES = {
@@ -25,7 +24,7 @@ const renderTechList = (
       {techs.map((item) => (
         <span
           key={item}
-          className="flex-1 py-2 px-3 lg:py-4 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+          className="flex-1 py-2 px-3 lg:px-4 lg:py-6 text-xs lg:text-lg opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
         >
           {item}
         </span>
@@ -96,7 +95,7 @@ const BentoGridItem = ({
 
           {id === 2 && <GridGlobe />}
           {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2 h-full ">
               {renderTechList(["React", "Next.js", "TypeScript"])}
               {renderTechList(["VueJS", "AWS", "MongoDB"], "top")}
             </div>
