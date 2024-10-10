@@ -34,6 +34,7 @@ const PinContainer = ({
       )}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      target="_blank"
       href={href || "/"}
     >
       <div

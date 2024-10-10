@@ -5,6 +5,7 @@ export type BentoGridItemProps = {
   img?: string;
   titleClassName?: string;
   imgClassName?: string;
+  spareImgClassName?: string;
   spareImg?: string;
   id: number;
 };

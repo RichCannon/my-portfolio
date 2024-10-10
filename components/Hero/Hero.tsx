@@ -4,6 +4,7 @@ import TextGenerateEffect from "../ui/TextGenerateEffect";
 import { TextGenerateEffectWordsType } from "../ui/TextGenerateEffect/TextGenerateEffect.types";
 import ButtonBorderMagic from "../ui/ButtonBorderMagic";
 import { FaLocationArrow } from "react-icons/fa";
+import FlipWords from "../ui/FlipWords";
 
 export const Hero: FC = ({}) => {
   const textGenerateText: TextGenerateEffectWordsType = [
@@ -36,15 +37,21 @@ export const Hero: FC = ({}) => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Dynamic web magic with next.js
+            Animated web portfolio
           </h2>
           <TextGenerateEffect
             className="text-center text-4xl md:text-5xl lg:text-6xl"
             words={textGenerateText}
           />
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-blue-100">
-            Hi, I&apos;m Volodymyr, a Next.js developer
-          </p>
+          <div className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-blue-100">
+            <p className="inline-block">Hi, I&apos;m Volodymyr, a </p>
+            <div className="w-48 inline-block border border-purple border-dashed rounded-md mx-1.5 px-0.5">
+              <FlipWords
+                words={["Next.js", "React", "Svelte", "React Native"]}
+              />
+            </div>
+            <p className="inline-block">developer</p>
+          </div>
           <a href="#about">
             <ButtonBorderMagic
               position="right"

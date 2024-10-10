@@ -4,8 +4,9 @@ import Footer from "@/components/Footer";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero/Hero";
 import RecentProjects from "@/components/RecentProjects";
-import Testimonials from "@/components/Testimonials";
-import WorkExperience from "@/components/WorkExperience";
+// import Testimonials from "@/components/Testimonials";
+// import WorkExperience from "@/components/WorkExperience";
+import WorkTimeline from "@/components/WorkTimeline";
 import { navItems } from "@/data";
 
 export default function Home() {
@@ -16,8 +17,9 @@ export default function Home() {
         <Hero />
         <Grid />
         <RecentProjects />
-        <Testimonials />
-        <WorkExperience />
+        {/* <Testimonials /> */}
+        <WorkTimeline />
+        {/* <WorkExperience /> */}
         <Approach />
         <Footer />
       </div>

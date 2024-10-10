@@ -2,6 +2,7 @@ import { NAV_ITEMS_IDS, projects } from "@/data";
 import React from "react";
 import PinContainer from "../ui/PinContainer";
 import { FaLocationArrow } from "react-icons/fa";
+import Spotlight from "../ui/Spotlight";
 
 const RecentProjects = () => {
   return (
@@ -25,7 +26,15 @@ const RecentProjects = () => {
               <div className="bg-[#13162D] lg:rounded-3xl rounded-xl">
                 <div className="w-[80vw] sm:w-[570px] h-[20vh] lg:h-[30vh] overflow-hidden relative flex items-center justify-center  mb-10">
                   <div className="relative overflow-hidden w-full h-full lg-rounder-3xl bg=[#13162d]">
-                    <img src="/bg.png" alt={"bg-img"} />
+                    {/* <img src="/bg.png" alt={"bg-img"} /> */}
+                    <Spotlight
+                      className="top-0 left-10 h-full w-full"
+                      fill="purple"
+                    />
+                    <Spotlight
+                      className="top-10 left-full h-full w-full"
+                      fill="white"
+                    />
                   </div>
                   <img
                     src={img}

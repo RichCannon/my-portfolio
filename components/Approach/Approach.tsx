@@ -11,7 +11,7 @@ const Approach = () => {
         My
         <span className="text-purple"> approach</span>
       </h1>
-      <div className="py-20 grid my-20  grid-cols-1 lg:grid-cols-3 items-center justify-center gap-4">
+      <div className="md:py-20 py-0 grid my-20  grid-cols-1 lg:grid-cols-3 items-center justify-center gap-4">
         <Card
           title="Planning & Strategy"
           icon={<AceternityIcon order="Phase 1" />}

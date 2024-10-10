@@ -4,6 +4,8 @@ import { BentoGridItemProps } from "./BentoGridItem.types";
 import BGGradientAnimation from "../BGGradientAnimation";
 import GridGlobe from "../GridGlobe/GridGlobe";
 import EmailCopyButton from "../EmailCopyButton";
+import { TECH_STACK_1, TECH_STACK_2 } from "@/data";
+import Compare from "../Compare";
 
 const GRADIENT_STYLES = {
   backgroundColor: "rgb(4,7,29)",
@@ -35,11 +37,12 @@ const renderTechList = (
 };
 
 const BentoGridItem = ({
-  className,
   title,
   description,
   img,
-  imgClassName,
+  className = "",
+  imgClassName = "",
+  spareImgClassName = "",
   spareImg,
   titleClassName,
   id,
@@ -71,7 +74,10 @@ const BentoGridItem = ({
             <img
               src={spareImg}
               alt={spareImg}
-              className={"object-cover object-center w-full h-full"}
+              className={cn(
+                spareImgClassName,
+                "object-cover object-center inset-0"
+              )}
             />
           </div>
         )}
@@ -79,25 +85,55 @@ const BentoGridItem = ({
         <div
           className={cn(
             titleClassName,
-            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
+            " transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10 z-10",
+            {
+              ["group-hover/bento:translate-x-2"]: id !== 5,
+            }
           )}
         >
-          {description && (
-            <div className="font-sans font-normal text-[#c1c2d3] text-sm md:text-x z-10">
-              {description}
-            </div>
+          <div
+            className={cn({
+              ["group-hover/bento:-translate-x-[120%] md:group-hover/bento:-translate-x-full z-[60] pointer-events-none transition-[transform] duration-200"]:
+                id === 5,
+            })}
+          >
+            {description && (
+              <div
+                className={
+                  "font-sans font-normal text-[#c1c2d3] text-sm md:text-x"
+                }
+              >
+                {description}
+              </div>
+            )}
+            {title && (
+              <div
+                className={"font-sans font-bold text-lg lg:text-3xl max-w-96"}
+              >
+                {title}
+              </div>
+            )}
+          </div>
+          {id === 5 && (
+            <div className="backdrop-blur-sm bg-black/30 absolute inset-0 group-hover/bento:opacity-0 z-50 pointer-events-none transition-[opacity] duration-200" />
           )}
-          {title && (
-            <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10">
-              {title}
-            </div>
-          )}
-
           {id === 2 && <GridGlobe />}
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2 h-full ">
-              {renderTechList(["React", "Next.js", "TypeScript"])}
-              {renderTechList(["VueJS", "AWS", "MongoDB"], "top")}
+              {renderTechList(TECH_STACK_1)}
+              {renderTechList(TECH_STACK_2, "top")}
+            </div>
+          )}
+          {id === 5 && (
+            <div className="absolute inset-0">
+              <Compare
+                firstImage="/bad-code.png"
+                secondImage="/good-code.png"
+                firstImageClassName="object-cover object-left-top"
+                secondImageClassname="object-cover object-left-top"
+                className="h-full w-full"
+                slideMode="hover"
+              />
             </div>
           )}
           {id === 6 && (

@@ -27,7 +27,7 @@ function Button({
   return (
     <Component
       className={cn(
-        "bg-transparent relative text-xl p-[1px] overflow-hidden md:col-span-2 ",
+        "bg-transparent relative text-xl p-[1.5px] overflow-hidden md:col-span-2 ",
         containerClassName
       )}
       style={{
