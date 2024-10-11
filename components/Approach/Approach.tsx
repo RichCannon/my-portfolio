@@ -24,6 +24,7 @@ const Approach = () => {
             dotSize,
           }) => (
             <Card
+              key={order}
               title={title}
               icon={<AceternityIcon order={order} />}
               description={description}
