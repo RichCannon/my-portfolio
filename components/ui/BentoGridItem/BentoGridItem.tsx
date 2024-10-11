@@ -127,8 +127,8 @@ const BentoGridItem = ({
           {id === 5 && (
             <div className="absolute inset-0">
               <Compare
-                firstImage="/bad-code.png"
-                secondImage="/good-code.png"
+                firstImage="bad-code.png"
+                secondImage="good-code.png"
                 firstImageClassName="object-cover object-left-top"
                 secondImageClassname="object-cover object-left-top"
                 className="h-full w-full"
