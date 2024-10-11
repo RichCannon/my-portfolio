@@ -61,7 +61,7 @@ export const gridItems = [
     imgClassName: "",
     spareImgClassName: "h-32",
     titleClassName: "justify-start",
-    img: "/grid.svg",
+    img: "grid.svg",
     spareImg: "b4.svg",
   },
 
@@ -72,8 +72,8 @@ export const gridItems = [
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
-    // img: "/b5.svg",
-    // spareImg: "/grid.svg",
+    // img: "b5.svg",
+    // spareImg: "grid.svg",
   },
   {
     id: 6,
@@ -177,32 +177,32 @@ export const companies = [
   {
     id: 1,
     name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
+    img: "cloud.svg",
+    nameImg: "cloudName.svg",
   },
   {
     id: 2,
     name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
+    img: "app.svg",
+    nameImg: "appName.svg",
   },
   {
     id: 3,
     name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
+    img: "host.svg",
+    nameImg: "hostName.svg",
   },
   {
     id: 4,
     name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
+    img: "s.svg",
+    nameImg: "streamName.svg",
   },
   {
     id: 5,
     name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
+    img: "dock.svg",
+    nameImg: "dockerName.svg",
   },
 ];
 
