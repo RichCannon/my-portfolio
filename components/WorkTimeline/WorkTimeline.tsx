@@ -1,11 +1,11 @@
 import React from "react";
 import Timeline from "../ui/Timeline";
-import { WORK_TIMELINE } from "@/data";
+import { NAV_ITEMS_IDS, WORK_TIMELINE } from "@/data";
 import { TimelineEntry } from "../ui/Timeline/Timeline.types";
 import { Vortex } from "../ui/Vortex/Vortex";
 
 const data: TimelineEntry[] = WORK_TIMELINE.map(
-  ({ title, description, timeline, highlightTitle, list }) => {
+  ({ title, description, timeline, highlightTitle, list, afterList }) => {
     return {
       title: timeline,
       content: (
@@ -14,13 +14,23 @@ const data: TimelineEntry[] = WORK_TIMELINE.map(
             {title}
             <span className="text-purple">{highlightTitle}</span>
           </h2>
-          <p className="md:text-xl text-lg">{description}</p>
+          <p className="md:text-xl text-lg text-justify indent-10">
+            {description}
+          </p>
           {list && (
-            <ul className="flex flex-col gap-y-1 md:text-xl text-lg list-disc md:ps-11 ps-0">
+            <ul
+              role="list"
+              className="flex  flex-col gap-y-1 md:text-xl text-lg list-disc  md:ps-10 ps-0 text-justify marker:text-purple"
+            >
               {list.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
+          )}
+          {afterList && (
+            <p className="md:text-xl text-lg text-justify indent-10">
+              {afterList}
+            </p>
           )}
         </div>
       ),
@@ -30,7 +40,10 @@ const data: TimelineEntry[] = WORK_TIMELINE.map(
 
 function WorkTimeline() {
   return (
-    <section className="md:py-20 py-10 px-3 md:px-0 relative flex flex-col justify-center">
+    <section
+      id={NAV_ITEMS_IDS.WORK_EXPERIENCE}
+      className="md:py-20 py-10 px-3 md:px-0 relative flex flex-col justify-center"
+    >
       <h1 className="heading">
         My
         <span className="text-purple"> work experience</span>

@@ -31,8 +31,8 @@ export const Vortex = (props: VortexProps) => {
   const baseTTL = props.baseTTL || 4000;
   const rangeTTL = props.rangeTTL || 150;
   const baseSpeed = props.baseSpeed || 0.0;
-  const rangeSpeed = props.rangeSpeed || 1.5;
-  const baseRadius = props.baseRadius || 1;
+  const rangeSpeed = props.rangeSpeed || 1;
+  const baseRadius = props.baseRadius || 2.3;
   const rangeRadius = props.rangeRadius || 2;
   const baseHue = props.baseHue || 220;
   const rangeHue = props.rangeHue || 100;

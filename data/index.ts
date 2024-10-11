@@ -2,13 +2,15 @@ export const NAV_ITEMS_IDS = {
   ABOUT: "about",
   PROJECTS: "projects",
   TESTIMONIALS: "testimonials",
+  WORK_EXPERIENCE: "work_experience",
   CONTACT: "contact",
 };
 
 export const navItems = [
   { name: "About", link: `#${NAV_ITEMS_IDS.ABOUT}` },
   { name: "Projects", link: `#${NAV_ITEMS_IDS.PROJECTS}` },
-  { name: "Testimonials", link: `#${NAV_ITEMS_IDS.TESTIMONIALS}` },
+  // { name: "Testimonials", link: `#${NAV_ITEMS_IDS.TESTIMONIALS}` },
+  { name: "Work Experience", link: `#${NAV_ITEMS_IDS.WORK_EXPERIENCE}` },
   { name: "Contact", link: `#${NAV_ITEMS_IDS.CONTACT}` },
 ];
 
@@ -258,39 +260,58 @@ export const WORK_TIMELINE = [
     timeline: `Oct 2020 - Jun 2021`,
     title: `Mobile developer`,
     highlightTitle: ` (React, React Native)`,
-    description: `Various interesting projects where I had the opportunity to
-practice my skills in creating a mobile design from Figma,
-adding FLUX structure by using react and redux, chats, and
-simple games (like a Schulte table and etc.)`,
+    description: `I have worked on a variety of exciting projects where I honed my skills in mobile design by creating interfaces from Figma, implementing the FLUX architecture with React and Redux, building chat applications, and developing simple interactive games like the Schulte table, among others.`,
   },
   {
     timeline: `Jun-Nov 2021`,
     title: `Full-stack developer`,
     highlightTitle: ` (React, Node.js)`,
-    description: `On this job I gained experience in creating a full-stack
-project, working with legacy code, and creating generators
-for blank projects.`,
+    description: `In this role, I gained valuable experience working on full-stack projects, including handling legacy code and developing project generators for blank templates. I also worked extensively with databases such as MongoDB and PostgreSQL, and utilized the Express.js framework to build efficient and scalable backend solutions.`,
   },
   {
     timeline: `Nov 2021 - Aug 2024`,
     title: `Front-end develoepr`,
     highlightTitle: ` (React, Next, Svelte)`,
-    description: `During this job, I gained experience working with the
-following:`,
+    description: `In this role, I gained hands-on experience working with a wide range of projects and technologies, including`,
     list: [
-      `CMS (Sanity.io);`,
-      `Creating simple landing pages;`,
-      `A big project for over a year with a team from around the
-  world;`,
-      `Led front-end developer on a small company product for
-  leadgens;`,
-      `Led SvelteKit front-end developer on a project that was
-  created so that teachers could book a trip with students;`,
-      `A self-serve platform where agents can purchase/filter
-  leads, track their ROI, manage policies and pipeline, and
-  integrate with their current tools`,
-      `A website for booking Plumbers in London created with
-  Zoho CRM and Prismic.io`,
+      `CMS (Sanity.io) for managing content efficiently`,
+      `Developing simple yet effective landing pages`,
+      `Contributing to a large-scale project over the span of a year, collaborating with a global team`,
+      `Serving as the lead front-end developer for a company’s lead generation product`,
+      `Leading the SvelteKit front-end development for a platform that allowed teachers to book trips for their students`,
+      `Building a self-serve platform where agents could purchase and filter leads, track ROI, manage policies, and pipelines, and integrate with their existing tools`,
+      `Creating a website for booking plumbers in London, utilizing Zoho CRM and Prismic.io.`,
     ],
+    afterList: `These experiences provided me with a strong foundation in project leadership, CMS management, and delivering user-focused solutions.`,
+  },
+];
+
+export const APPROACH = [
+  {
+    title: "Planning & Strategy",
+    order: `Phase 1`,
+    description: `We’ll work together to outline your website’s objectives, target audience, and essential features. We’ll cover details like site layout, navigation, and content needs.`,
+    animationSpeed: 5.1,
+    containerClassName: "bg-emerald-900",
+  },
+  {
+    title: "Development & Progress Update",
+    order: `Phase 2`,
+    description: `Once we finalize the plan, I cue my lofi playlist and dive into coding, keeping you updated throughout the process—from wireframes to the final code.`,
+    animationSpeed: 3,
+    containerClassName: "bg-black",
+    colors: [
+      [236, 72, 153],
+      [232, 121, 249],
+    ],
+  },
+  {
+    title: "Development & Launch",
+    order: `Phase 3`,
+    description: `This is where your vision comes to life! Using the approved design, I’ll code and build your website from the ground up, ensuring it’s fully functional and tailored to your needs.`,
+    animationSpeed: 3,
+    containerClassName: "bg-sky-600",
+    colors: [[125, 211, 252]],
+    dotSize: 2,
   },
 ];

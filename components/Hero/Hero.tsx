@@ -45,7 +45,7 @@ export const Hero: FC = ({}) => {
           />
           <div className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-blue-100">
             <p className="inline-block">Hi, I&apos;m Volodymyr, a </p>
-            <div className="w-48 inline-block border border-purple border-dashed rounded-md mx-1.5 px-0.5">
+            <div className="md:w-48 w-32 inline-block border border-purple border-dashed rounded-md mx-1.5 px-0.5">
               <FlipWords
                 words={["Next.js", "React", "Svelte", "React Native"]}
               />
