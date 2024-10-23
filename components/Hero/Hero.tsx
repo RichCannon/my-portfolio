@@ -5,6 +5,7 @@ import { TextGenerateEffectWordsType } from "../ui/TextGenerateEffect/TextGenera
 import ButtonBorderMagic from "../ui/ButtonBorderMagic";
 import { FaLocationArrow } from "react-icons/fa";
 import FlipWords from "../ui/FlipWords";
+import { HERO_FLIP_WORDS, MY_FIRST_NAME, NAV_ITEMS_IDS } from "@/data";
 
 export const Hero: FC = ({}) => {
   const textGenerateText: TextGenerateEffectWordsType = [
@@ -44,15 +45,13 @@ export const Hero: FC = ({}) => {
             words={textGenerateText}
           />
           <div className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-blue-100">
-            <p className="inline-block">Hi, I&apos;m Volodymyr, a </p>
+            <p className="inline-block">Hi, I&apos;m {MY_FIRST_NAME}, a </p>
             <div className="md:w-48 w-32 inline-block border border-purple border-dashed rounded-md mx-1.5 px-0.5">
-              <FlipWords
-                words={["Next.js", "React", "Svelte", "React Native"]}
-              />
+              <FlipWords words={HERO_FLIP_WORDS} />
             </div>
             <p className="inline-block">developer</p>
           </div>
-          <a href="#about">
+          <a href={`#${NAV_ITEMS_IDS.ABOUT}`}>
             <ButtonBorderMagic
               position="right"
               icon={<FaLocationArrow />}

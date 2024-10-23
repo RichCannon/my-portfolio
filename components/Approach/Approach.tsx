@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { memo } from "react";
 import CanvasRevealEffect from "../ui/CanvasRevealEffect";
 import { AnimatePresence, motion } from "framer-motion";
 import ButtonBorderMagic from "../ui/ButtonBorderMagic";
@@ -23,7 +23,7 @@ const Approach = () => {
             colors,
             dotSize,
           }) => (
-            <Card
+            <CardMemo
               key={order}
               title={title}
               icon={<AceternityIcon order={order} />}
@@ -35,7 +35,7 @@ const Approach = () => {
                 colors={colors}
                 dotSize={dotSize}
               />
-            </Card>
+            </CardMemo>
           )
         )}
       </div>
@@ -94,6 +94,8 @@ const Card = ({
   );
 };
 
+const CardMemo = memo(Card);
+
 const AceternityIcon = ({ order }: { order: string }) => {
   return (
     <div className="flex">
@@ -118,4 +120,4 @@ export const Icon = ({ className, ...rest }: any) => {
   );
 };
 
-export default Approach;
+export default memo(Approach);

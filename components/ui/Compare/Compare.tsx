@@ -4,10 +4,11 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { BiDotsVertical } from "react-icons/bi";
+import Image, { StaticImageData } from "next/image";
 
 interface CompareProps {
-  firstImage?: string;
-  secondImage?: string;
+  firstImage?: StaticImageData;
+  secondImage?: StaticImageData;
   className?: string;
   firstImageClassName?: string;
   secondImageClassname?: string;
@@ -19,8 +20,8 @@ interface CompareProps {
 }
 
 const Compare = ({
-  firstImage = "",
-  secondImage = "",
+  firstImage,
+  secondImage,
   className,
   firstImageClassName,
   secondImageClassname,
@@ -199,7 +200,7 @@ const Compare = ({
               }}
               transition={{ duration: 0 }}
             >
-              <img
+              <Image
                 alt="first image"
                 src={firstImage}
                 className={cn(
@@ -221,7 +222,7 @@ const Compare = ({
               secondImageClassname
             )}
             alt="second image"
-            src={secondImage}
+            src={secondImage.src}
             draggable={false}
           />
         ) : null}

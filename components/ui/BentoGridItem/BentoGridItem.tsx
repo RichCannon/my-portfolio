@@ -6,6 +6,9 @@ import GridGlobe from "../GridGlobe/GridGlobe";
 import EmailCopyButton from "../EmailCopyButton";
 import { TECH_STACK_1, TECH_STACK_2 } from "@/data";
 import Compare from "../Compare";
+import Image from "next/image";
+import badCodeImg from "@/public/bad-code.png";
+import goodCodeImg from "@/public/good-code.png";
 
 const GRADIENT_STYLES = {
   backgroundColor: "rgb(4,7,29)",
@@ -26,7 +29,7 @@ const renderTechList = (
       {techs.map((item) => (
         <span
           key={item}
-          className="flex-1 py-2 px-3 lg:px-4 lg:py-6 text-xs lg:text-lg opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+          className="flex items-center flex-1 py-2 px-3 lg:px-4 lg:py-6 text-xs lg:text-lg opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
         >
           {item}
         </span>
@@ -40,10 +43,10 @@ const BentoGridItem = ({
   title,
   description,
   img,
+  spareImg,
   className = "",
   imgClassName = "",
   spareImgClassName = "",
-  spareImg,
   titleClassName,
   id,
 }: BentoGridItemProps) => {
@@ -58,9 +61,9 @@ const BentoGridItem = ({
       <div className={`${id === 6 ? "flex justify-center" : ""} h-full`}>
         {img && (
           <div className="w-full h-full absolute">
-            <img
+            <Image
               src={img}
-              alt={img}
+              alt={img.src}
               className={cn(imgClassName, "object-cover object-center")}
             />
           </div>
@@ -71,9 +74,9 @@ const BentoGridItem = ({
               id === 5 ? "w-full opacity-80" : ""
             }`}
           >
-            <img
+            <Image
               src={spareImg}
-              alt={spareImg}
+              alt={spareImg.src}
               className={cn(
                 spareImgClassName,
                 "object-cover object-center inset-0"
@@ -127,8 +130,8 @@ const BentoGridItem = ({
           {id === 5 && (
             <div className="absolute inset-0">
               <Compare
-                firstImage="bad-code.png"
-                secondImage="good-code.png"
+                firstImage={badCodeImg}
+                secondImage={goodCodeImg}
                 firstImageClassName="object-cover object-left-top"
                 secondImageClassname="object-cover object-left-top"
                 className="h-full w-full"

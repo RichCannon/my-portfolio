@@ -1,11 +1,11 @@
 "use client";
 import { cn } from "@/lib/utils";
-import React, { useEffect, useRef } from "react";
+import React, { memo, ReactNode, useEffect, useRef } from "react";
 import { createNoise3D } from "simplex-noise";
 import { motion } from "framer-motion";
 
 interface VortexProps {
-  children?: any;
+  children?: ReactNode;
   className?: string;
   containerClassName?: string;
   particleCount?: number;
@@ -21,7 +21,7 @@ interface VortexProps {
   backgroundColor?: string;
 }
 
-export const Vortex = (props: VortexProps) => {
+const Vortex = (props: VortexProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef(null);
   const particleCount = props.particleCount || 700;
@@ -260,3 +260,5 @@ export const Vortex = (props: VortexProps) => {
     </div>
   );
 };
+
+export default memo(Vortex);

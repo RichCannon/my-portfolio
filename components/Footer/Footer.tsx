@@ -2,6 +2,8 @@ import { MY_EMAIL, MY_FULL_NAME, NAV_ITEMS_IDS, socialMedia } from "@/data";
 import React from "react";
 import ButtonBorderMagic from "../ui/ButtonBorderMagic";
 import { FaLocationArrow } from "react-icons/fa";
+import Image from "next/image";
+import footerGridImg from "@/public/footer-grid.svg";
 
 const Footer = () => {
   return (
@@ -9,8 +11,8 @@ const Footer = () => {
       id={NAV_ITEMS_IDS.CONTACT}
       className="w-full mb-[100px] md:mb-5 pb-10 px-3 md:px-0"
     >
-      <img
-        src="footer-grid.svg"
+      <Image
+        src={footerGridImg}
         alt="grid"
         className="w-full absolute left-0 bottom-0 translate-y-72 min-h-96 opacity-50 pointer-events-none"
       />
@@ -41,7 +43,7 @@ const Footer = () => {
               target="_blank"
               className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-200"
             >
-              <img src={img} width={20} height={20} alt={name} />
+              <Image src={img} width={20} height={20} alt={name} />
             </a>
           ))}
         </div>

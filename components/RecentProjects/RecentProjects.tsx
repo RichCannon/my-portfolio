@@ -1,8 +1,9 @@
 import { NAV_ITEMS_IDS, projects } from "@/data";
-import React from "react";
+import React, { memo } from "react";
 import PinContainer from "../ui/PinContainer";
 import { FaLocationArrow } from "react-icons/fa";
 import Spotlight from "../ui/Spotlight";
+import Image from "next/image";
 
 const RecentProjects = () => {
   return (
@@ -36,7 +37,7 @@ const RecentProjects = () => {
                       fill="white"
                     />
                   </div>
-                  <img
+                  <Image
                     src={img}
                     alt={`Porfolio project: ${title}`}
                     className="z-10 absolute bottom-0"
@@ -54,13 +55,18 @@ const RecentProjects = () => {
                       {iconLists.map((icon, idx) => {
                         return (
                           <div
-                            key={icon}
+                            key={icon.src}
                             className="border border-white/[0.2] rounded-full bg-black-100 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                             style={{
                               transform: `translateX(-${5 * idx * 2}px)`,
                             }}
                           >
-                            <img src={icon} alt={icon} className="p-2" />
+                            <Image
+                              width={40}
+                              src={icon}
+                              alt={icon.src}
+                              className="p-2"
+                            />
                           </div>
                         );
                       })}
@@ -82,4 +88,4 @@ const RecentProjects = () => {
   );
 };
 
-export default RecentProjects;
+export default memo(RecentProjects);

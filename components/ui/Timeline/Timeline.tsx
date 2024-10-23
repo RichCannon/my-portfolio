@@ -1,6 +1,6 @@
 "use client";
 import { useScroll, useTransform, motion } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import React, { memo, useEffect, useRef, useState } from "react";
 import { TimelineProps } from "./Timeline.types";
 
 const Timeline = ({ data }: TimelineProps) => {
@@ -100,4 +100,4 @@ const Timeline = ({ data }: TimelineProps) => {
   );
 };
 
-export default Timeline;
+export default memo(Timeline);

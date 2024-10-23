@@ -1,7 +1,33 @@
+import b1Img from "@/public/b1.webp";
+import b4Img from "@/public/b4.svg";
+import gridImg from "@/public/grid.svg";
+import muiIcon from "@/public/mui-icon.svg";
+import reIcon from "@/public/re.svg";
+import nextIcon from "@/public/next.svg";
+import veIcon from "@/public/vanila-extract-icon.svg";
+import tsIcon from "@/public/ts.svg";
+import googleMapIcon from "@/public/google-map-icon.svg";
+import svelteIcon from "@/public/svelte-icon.svg";
+import tailIcon from "@/public/tail.svg";
+import sbIcon from "@/public/supabse-icon.svg";
+import mobxIcon from "@/public/mobx-icon.svg";
+import prismicIcon from "@/public/prismic-io-icon.png";
+import scIcon from "@/public/styled-components-icon.png";
+import reduxIcon from "@/public/redux-icon.svg";
+import gitIcon from "@/public/git.svg";
+import linIcon from "@/public/link.svg";
+import tgIcon from "@/public/telegram.svg";
+import ProjectCUImg from "@/public/Project_CU.png";
+import ProjectEDTImg from "@/public/Project_EDT.png";
+import ProjectKImg from "@/public/Project_K.png";
+import ProjectPBImg from "@/public/Project_PB.png";
+
+export const HERO_FLIP_WORDS = ["Next.js", "React", "Svelte", "React Native"];
+
 export const NAV_ITEMS_IDS = {
   ABOUT: "about",
   PROJECTS: "projects",
-  TESTIMONIALS: "testimonials",
+  // TESTIMONIALS: "testimonials",
   WORK_EXPERIENCE: "work_experience",
   CONTACT: "contact",
 };
@@ -26,43 +52,32 @@ export const gridItems = [
   {
     id: 1,
     title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
+    imgClassName: "w-full h-full max-h-[900px]",
     titleClassName: "justify-end",
-    img: "b1.svg",
-    spareImg: "",
+    img: b1Img,
   },
   {
     id: 2,
     title: "I'm very flexible with time zone communications",
-    description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
     titleClassName: "justify-start",
-    img: "",
-    spareImg: "",
   },
   {
     id: 3,
     title: "My tech stack",
     description: "I constantly try to improve",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
     titleClassName: "justify-center",
-    img: "",
-    spareImg: "",
   },
   {
     id: 4,
     title: "Tech enthusiast with a passion for development.",
-    description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1 h-52",
-    imgClassName: "",
     spareImgClassName: "h-32",
     titleClassName: "justify-start",
-    img: "grid.svg",
-    spareImg: "b4.svg",
+    img: gridImg,
+    spareImg: b4Img,
   },
 
   {
@@ -78,12 +93,8 @@ export const gridItems = [
   {
     id: 6,
     title: "Do you want to start a project together?",
-    description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    img: "",
-    spareImg: "",
   },
 ];
 
@@ -92,165 +103,147 @@ export const projects = [
     id: 1,
     title: "Kinetik",
     des: "Kinetik delivers a synchronized ecosystem specifically engineered to provide interoperability between technologies used by all stakeholders including health plans, members, transportation brokers, healthcare providers, and transportation providers.",
-    img: "Project_K.png",
-    iconLists: ["re.svg", "ts.svg", "mui-icon.svg", "google-map-icon.svg"],
+    img: ProjectKImg,
+    iconLists: [reIcon, tsIcon, muiIcon, googleMapIcon],
     link: "https://kinetik.care/",
   },
   {
     id: 2,
     title: "EdTripper | Educational trip planning",
     des: "All-in-one school experience bookings: discover, manage and book educational activities. Book your next school activity with thousands of programs.",
-    img: "Project_EDT.png",
-    iconLists: [
-      "svelte-icon.svg",
-      "tail.svg",
-      "ts.svg",
-      "google-map-icon.svg",
-      "supabse-icon.svg",
-    ],
+    img: ProjectEDTImg,
+    iconLists: [svelteIcon, tailIcon, tsIcon, googleMapIcon, sbIcon],
     link: "https://edtripper.com/",
   },
   {
     id: 3,
     title: "Pleasant Plumbers",
     des: "Pleasant Plumbers is more than just a plumbing and heating company - it's a promise of reliability, transparency, and unwavering customer focus. Join us as we strive to revolutionize an industry that has been marred by deceit and lack of accountability.",
-    img: "Project_PB.png",
-    iconLists: [
-      "re.svg",
-      "next.svg",
-      "vanila-extract-icon.svg",
-      "ts.svg",
-      "mobx-icon.svg",
-      "prismic-io-icon.png",
-    ],
+    img: ProjectPBImg,
+    iconLists: [reIcon, nextIcon, veIcon, tsIcon, mobxIcon, prismicIcon],
     link: "https://pleasantplumbers.com/",
   },
   {
     id: 4,
     title: "ClientUp | Get More Customers",
     des: "We connect insurers, lenders, and distribution partners to consumers who are ready to purchase insurance.",
-    img: "Project_CU.png",
-    iconLists: [
-      "re.svg",
-      "styled-components-icon.png",
-      "ts.svg",
-      "redux-icon.svg",
-    ],
+    img: ProjectCUImg,
+    iconLists: [reIcon, scIcon, tsIcon, reduxIcon],
     link: "https://clientup.io/",
   },
 ];
 
 export const testimonials = [
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
+  // {
+  //   quote:
+  //     "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+  //   name: "Michael Johnson",
+  //   title: "Director of AlphaStream Technologies",
+  // },
+  // {
+  //   quote:
+  //     "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+  //   name: "Michael Johnson",
+  //   title: "Director of AlphaStream Technologies",
+  // },
+  // {
+  //   quote:
+  //     "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+  //   name: "Michael Johnson",
+  //   title: "Director of AlphaStream Technologies",
+  // },
+  // {
+  //   quote:
+  //     "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+  //   name: "Michael Johnson",
+  //   title: "Director of AlphaStream Technologies",
+  // },
+  // {
+  //   quote:
+  //     "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+  //   name: "Michael Johnson",
+  //   title: "Director of AlphaStream Technologies",
+  // },
 ];
 
 export const companies = [
-  {
-    id: 1,
-    name: "cloudinary",
-    img: "cloud.svg",
-    nameImg: "cloudName.svg",
-  },
-  {
-    id: 2,
-    name: "appwrite",
-    img: "app.svg",
-    nameImg: "appName.svg",
-  },
-  {
-    id: 3,
-    name: "HOSTINGER",
-    img: "host.svg",
-    nameImg: "hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "s.svg",
-    nameImg: "streamName.svg",
-  },
-  {
-    id: 5,
-    name: "docker.",
-    img: "dock.svg",
-    nameImg: "dockerName.svg",
-  },
+  // {
+  //   id: 1,
+  //   name: "cloudinary",
+  //   img: "cloud.svg",
+  //   nameImg: "cloudName.svg",
+  // },
+  // {
+  //   id: 2,
+  //   name: "appwrite",
+  //   img: "app.svg",
+  //   nameImg: "appName.svg",
+  // },
+  // {
+  //   id: 3,
+  //   name: "HOSTINGER",
+  //   img: "host.svg",
+  //   nameImg: "hostName.svg",
+  // },
+  // {
+  //   id: 4,
+  //   name: "stream",
+  //   img: "s.svg",
+  //   nameImg: "streamName.svg",
+  // },
+  // {
+  //   id: 5,
+  //   name: "docker.",
+  //   img: "dock.svg",
+  //   nameImg: "dockerName.svg",
+  // },
 ];
 
 export const workExperience = [
-  {
-    id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
-    className: "md:col-span-2",
-    thumbnail: "exp1.svg",
-  },
-  {
-    id: 2,
-    title: "Mobile App Dev",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "exp2.svg",
-  },
-  {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "exp3.svg",
-  },
-  {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
-    thumbnail: "exp4.svg",
-  },
+  // {
+  //   id: 1,
+  //   title: "Frontend Engineer Intern",
+  //   desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+  //   className: "md:col-span-2",
+  //   thumbnail: "exp1.svg",
+  // },
+  // {
+  //   id: 2,
+  //   title: "Mobile App Dev",
+  //   desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+  //   className: "md:col-span-2", // change to md:col-span-2
+  //   thumbnail: "exp2.svg",
+  // },
+  // {
+  //   id: 3,
+  //   title: "Freelance App Dev Project",
+  //   desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+  //   className: "md:col-span-2", // change to md:col-span-2
+  //   thumbnail: "exp3.svg",
+  // },
+  // {
+  //   id: 4,
+  //   title: "Lead Frontend Developer",
+  //   desc: "Developed and maintained user-facing features using modern frontend technologies.",
+  //   className: "md:col-span-2",
+  //   thumbnail: "exp4.svg",
+  // },
 ];
 
 export const socialMedia = [
   {
     name: "Github",
-    img: "git.svg",
+    img: gitIcon,
     href: "https://github.com/RichCannon",
   },
   {
     name: "Linkedin",
-    img: "link.svg",
+    img: linIcon,
     href: "https://www.linkedin.com/in/richcannon4",
   },
   {
     name: "Telegram",
-    img: "telegram.svg",
+    img: tgIcon,
     href: "https://t.me/Volod_K",
   },
 ];

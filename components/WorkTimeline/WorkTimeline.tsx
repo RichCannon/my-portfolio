@@ -1,8 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import Timeline from "../ui/Timeline";
 import { NAV_ITEMS_IDS, WORK_TIMELINE } from "@/data";
 import { TimelineEntry } from "../ui/Timeline/Timeline.types";
-import { Vortex } from "../ui/Vortex/Vortex";
+import dynamic from "next/dynamic";
+// import { Vortex } from "../ui/Vortex/Vortex";
 
 const data: TimelineEntry[] = WORK_TIMELINE.map(
   ({ title, description, timeline, highlightTitle, list, afterList }) => {
@@ -38,6 +39,10 @@ const data: TimelineEntry[] = WORK_TIMELINE.map(
   }
 );
 
+const DynamicVortex = dynamic(() => import("../ui/Vortex/Vortex"), {
+  ssr: false,
+});
+
 function WorkTimeline() {
   return (
     <section
@@ -49,7 +54,7 @@ function WorkTimeline() {
         <span className="text-purple"> work experience</span>
       </h1>
       <div className="absolute top-0 bottom-0 w-full">
-        <Vortex
+        <DynamicVortex
           containerClassName="sticky top-0 h-screen"
           rangeY={800}
           particleCount={100}
@@ -57,11 +62,11 @@ function WorkTimeline() {
           baseHue={204}
           rangeHue={10}
           backgroundColor="transparent"
-        ></Vortex>
+        />
       </div>
       <Timeline data={data} />
     </section>
   );
 }
 
-export default WorkTimeline;
+export default memo(WorkTimeline);
