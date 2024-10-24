@@ -234,13 +234,18 @@ const Vortex = (props: VortexProps) => {
 
   useEffect(() => {
     setup();
-    window.addEventListener("resize", () => {
+
+    const resizeListener = () => {
       const canvas = canvasRef.current;
       const ctx = canvas?.getContext("2d");
       if (canvas && ctx) {
         resize(canvas);
       }
-    });
+    };
+
+    window.addEventListener("resize", resizeListener);
+
+    return () => window.removeEventListener("resize", resizeListener);
   }, []);
 
   return (

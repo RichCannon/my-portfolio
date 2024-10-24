@@ -29,7 +29,7 @@ const renderTechList = (
       {techs.map((item) => (
         <span
           key={item}
-          className="flex items-center flex-1 py-2 px-3 lg:px-4 lg:py-6 text-xs lg:text-lg opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+          className="flex items-center justify-center flex-1 py-2 px-3 lg:px-4 lg:py-6 text-xs lg:text-lg opacity-50 lg:opacity-100 rounded-lg bg-[#10132E]"
         >
           {item}
         </span>

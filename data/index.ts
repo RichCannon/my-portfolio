@@ -40,6 +40,8 @@ export const navItems = [
   { name: "Contact", link: `#${NAV_ITEMS_IDS.CONTACT}` },
 ];
 
+export const COPYRIGHT_YEAR = new Date().getFullYear();
+
 export const MY_EMAIL = "syndicateua@gmail.com";
 export const MY_FIRST_NAME = "Volodymyr";
 export const MY_LAST_NAME = "Kucher";
@@ -74,7 +76,6 @@ export const gridItems = [
     id: 4,
     title: "Tech enthusiast with a passion for development.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1 h-52",
-    spareImgClassName: "h-32",
     titleClassName: "justify-start",
     img: gridImg,
     spareImg: b4Img,

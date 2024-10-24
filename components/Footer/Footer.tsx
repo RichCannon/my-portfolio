@@ -1,4 +1,10 @@
-import { MY_EMAIL, MY_FULL_NAME, NAV_ITEMS_IDS, socialMedia } from "@/data";
+import {
+  COPYRIGHT_YEAR,
+  MY_EMAIL,
+  MY_FULL_NAME,
+  NAV_ITEMS_IDS,
+  socialMedia,
+} from "@/data";
 import React from "react";
 import ButtonBorderMagic from "../ui/ButtonBorderMagic";
 import { FaLocationArrow } from "react-icons/fa";
@@ -33,7 +39,7 @@ const Footer = () => {
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center gap-6">
         <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 {MY_FULL_NAME}
+          Copyright © {COPYRIGHT_YEAR} {MY_FULL_NAME}
         </p>
         <div className="flex items-center md:gap-3 gap-6">
           {socialMedia.map(({ name, img, href }) => (
