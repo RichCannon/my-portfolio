@@ -40,7 +40,7 @@ const data: TimelineEntry[] = WORK_TIMELINE.map(
 );
 
 const DynamicVortex = dynamic(() => import("../ui/Vortex/Vortex"), {
-  ssr: false,
+  ssr: true,
 });
 
 function WorkTimeline() {

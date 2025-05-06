@@ -1,6 +1,5 @@
 import b1Img from "@/public/b1.webp";
 import b4Img from "@/public/b4.svg";
-import gridImg from "@/public/grid.svg";
 import muiIcon from "@/public/mui-icon.svg";
 import reIcon from "@/public/re.svg";
 import nextIcon from "@/public/next.svg";
@@ -27,7 +26,6 @@ export const HERO_FLIP_WORDS = ["Next.js", "React", "Svelte", "React Native"];
 export const NAV_ITEMS_IDS = {
   ABOUT: "about",
   PROJECTS: "projects",
-  // TESTIMONIALS: "testimonials",
   WORK_EXPERIENCE: "work_experience",
   CONTACT: "contact",
 };
@@ -35,7 +33,6 @@ export const NAV_ITEMS_IDS = {
 export const navItems = [
   { name: "About", link: `#${NAV_ITEMS_IDS.ABOUT}` },
   { name: "Projects", link: `#${NAV_ITEMS_IDS.PROJECTS}` },
-  // { name: "Testimonials", link: `#${NAV_ITEMS_IDS.TESTIMONIALS}` },
   { name: "Work Experience", link: `#${NAV_ITEMS_IDS.WORK_EXPERIENCE}` },
   { name: "Contact", link: `#${NAV_ITEMS_IDS.CONTACT}` },
 ];
@@ -77,7 +74,6 @@ export const gridItems = [
     title: "Tech enthusiast with a passion for development.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1 h-52",
     titleClassName: "justify-start",
-    img: gridImg,
     spareImg: b4Img,
   },
 

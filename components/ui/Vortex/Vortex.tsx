@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import React, { memo, ReactNode, useEffect, useRef } from "react";
 import { createNoise3D } from "simplex-noise";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 interface VortexProps {
   children?: ReactNode;
@@ -23,7 +23,8 @@ interface VortexProps {
 
 const Vortex = (props: VortexProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const containerRef = useRef(null);
+  const intervalRef = useRef<NodeJS.Timeout>();
+  // const containerRef = useRef(null);
   const particleCount = props.particleCount || 700;
   const particlePropCount = 9;
   const particlePropsLength = particleCount * particlePropCount;
@@ -60,8 +61,8 @@ const Vortex = (props: VortexProps) => {
 
   const setup = () => {
     const canvas = canvasRef.current;
-    const container = containerRef.current;
-    if (canvas && container) {
+    // const container = containerRef.current;
+    if (canvas /* && container */) {
       const ctx = canvas.getContext("2d");
 
       if (ctx) {
@@ -113,7 +114,11 @@ const Vortex = (props: VortexProps) => {
     renderGlow(canvas, ctx);
     renderToScreen(canvas, ctx);
 
-    window.requestAnimationFrame(() => draw(canvas, ctx));
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(() => draw(canvas, ctx), 1000 / 60);
+    // window.requestAnimationFrame(() => );
   };
 
   const drawParticles = (ctx: CanvasRenderingContext2D) => {
@@ -123,6 +128,7 @@ const Vortex = (props: VortexProps) => {
   };
 
   const updateParticle = (i: number, ctx: CanvasRenderingContext2D) => {
+    // console.log("update particles");
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -250,17 +256,13 @@ const Vortex = (props: VortexProps) => {
 
   return (
     <div className={cn("", props.containerClassName)}>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        ref={containerRef}
+      <div
+        // initial={{ opacity: 0 }}
+        // animate={{ opacity: 1 }}
+        // ref={containerRef}
         className="absolute h-full w-full inset-0 z-0 bg-transparent flex justify-center"
       >
         <canvas ref={canvasRef}></canvas>
-      </motion.div>
-
-      <div className={cn("relative z-10", props.className)}>
-        {props.children}
       </div>
     </div>
   );
