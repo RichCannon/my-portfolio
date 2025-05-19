@@ -59,19 +59,19 @@ const Vortex = (props: VortexProps) => {
   const lerp = (n1: number, n2: number, speed: number): number =>
     (1 - speed) * n1 + speed * n2;
 
-  const setup = () => {
-    const canvas = canvasRef.current;
-    // const container = containerRef.current;
-    if (canvas /* && container */) {
-      const ctx = canvas.getContext("2d");
+  // const setup = () => {
+  //   const canvas = canvasRef.current;
+  //   // const container = containerRef.current;
+  //   if (canvas /* && container */) {
+  //     const ctx = canvas.getContext("2d");
 
-      if (ctx) {
-        resize(canvas);
-        initParticles();
-        draw(canvas, ctx);
-      }
-    }
-  };
+  //     if (ctx) {
+  //       resize(canvas);
+  //       initParticles();
+  //       draw(canvas, ctx);
+  //     }
+  //   }
+  // };
 
   const initParticles = () => {
     tick = 0;
@@ -114,10 +114,12 @@ const Vortex = (props: VortexProps) => {
     renderGlow(canvas, ctx);
     renderToScreen(canvas, ctx);
 
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
-    intervalRef.current = setInterval(() => draw(canvas, ctx), 1000 / 60);
+    // if (intervalRef.current) {
+    //   console.log("123");
+    //   clearInterval(intervalRef.current);
+    // }
+    // draw(canvas, ctx);
+    // intervalRef.current = setInterval(() => draw(canvas, ctx), 1000 / 60);
     // window.requestAnimationFrame(() => );
   };
 
@@ -239,7 +241,31 @@ const Vortex = (props: VortexProps) => {
   };
 
   useEffect(() => {
-    setup();
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    const canvas = canvasRef.current;
+
+    if (canvas) {
+      const ctx = canvas.getContext("2d");
+
+      if (ctx) {
+        resize(canvas);
+        initParticles();
+        intervalRef.current = setInterval(() => draw(canvas, ctx), 1000 / 60);
+        // draw(canvas, ctx);
+      }
+    }
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    // setup();
 
     const resizeListener = () => {
       const canvas = canvasRef.current;
