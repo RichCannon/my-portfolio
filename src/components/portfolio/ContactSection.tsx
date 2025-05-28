@@ -166,7 +166,10 @@ export function ContactSection() {
                 <CardTitle>Quick Response</CardTitle>
                 <CardDescription>
                   I typically respond to messages within 24 hours. For urgent
-                  matters, please call or reach out via LinkedIn.
+                  matters, please reach out via{" "}
+                  <a href={TELEGRAM_LINK} className="underline" target="_blank">
+                    Telegram.
+                  </a>
                 </CardDescription>
               </CardHeader>
             </Card>
