@@ -60,7 +60,7 @@ export function Navigation() {
               ? "text-primary"
               : "text-muted-foreground",
             mobile &&
-              "block w-full text-left py-2 px-4 hover:bg-accent rounded-md",
+              "block w-full text-left py-2 px-4 hover:bg-accent rounded-md"
           )}
         >
           {item.label}
@@ -75,15 +75,15 @@ export function Navigation() {
         "fixed top-0 w-full z-50 transition-all duration-300",
         isScrolled
           ? "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b"
-          : "bg-transparent",
+          : "bg-transparent"
       )}
     >
-      <div className="container flex h-16 items-center justify-center relative">
+      <div className="container flex h-16 items-center justify-end md:justify-center relative">
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
           <NavLinks />
         </nav>
-        <div className="absolute right-8">
+        <div className="absolute md:right-8 md:left-auto left-4 right-auto">
           <ThemeSwitch />
         </div>
 
