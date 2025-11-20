@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CalendarDays, MapPin } from "lucide-react";
-import { CERTIFICATIONS, EDUCATIONS, EXPERIENCES } from "@/constants/data";
+import { EDUCATIONS, EXPERIENCES } from "@/constants/data";
 
 export function ExperienceSection() {
   return (
@@ -87,7 +87,7 @@ export function ExperienceSection() {
                               <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
                               {achievement}
                             </li>
-                          ),
+                          )
                         )}
                       </ul>
                     </div>

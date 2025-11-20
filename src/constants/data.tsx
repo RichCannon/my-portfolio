@@ -3,6 +3,7 @@ import ProjectEDTImg from "@/assets/images/Project_EDT.png";
 import ProjectKImg from "@/assets/images/Project_K.png";
 import ProjectPBImg from "@/assets/images/Project_PB.png";
 import ProjectContraImg from "@/assets/images/Project_Contra.png";
+import ProjectClickTrip from "@/assets/images/Project_ClickTrip.png";
 
 import GithubIcon from "@/assets/icons/GithubIcon";
 import LinkedinIcon from "@/assets/icons/LinkedinIcon";
@@ -158,6 +159,15 @@ export const TECHS_LIST = [
 
 export const PROJECTS = [
   {
+    title: "ClickTrip",
+    description:
+      "Your journey starts with one click! Millions of hotel options, zero hassle. Booking a hotel room never felt better. Find your best deal now.",
+    image: ProjectClickTrip,
+    technologies: ["React", "Redux", "TypeScript", "Mui", "Antd"],
+    url: "https://clicktrip.com",
+    featured: true,
+  },
+  {
     title: "Kinetik",
     description:
       "Kinetik delivers a synchronized ecosystem specifically engineered to provide interoperability between technologies used by all stakeholders including health plans, members, transportation brokers, healthcare providers, and transportation providers.",
@@ -165,7 +175,6 @@ export const PROJECTS = [
     technologies: ["React", "TypeScript", "Mui", "Google Map"],
     url: "https://kinetik.care/",
     featured: true,
-    githubUrl: null,
   },
   {
     title: "EdTripper | Educational trip planning",
@@ -176,6 +185,22 @@ export const PROJECTS = [
     url: "https://edtripper.com/",
     featured: true,
   },
+
+  {
+    title: "ClientUp | Get More Customers",
+    description:
+      "We connect insurers, lenders, and distribution partners to consumers who are ready to purchase insurance.",
+    image: ProjectCUImg,
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "Styled Components",
+      "Redux/RTK Query",
+    ],
+    url: "https://clientup.io/",
+    featured: true,
+  },
+  // NON_FEATURED
   {
     title: "Pleasant Plumbers",
     description:
@@ -192,20 +217,6 @@ export const PROJECTS = [
     url: "https://pleasantplumbers.com/",
   },
   {
-    title: "ClientUp | Get More Customers",
-    description:
-      "We connect insurers, lenders, and distribution partners to consumers who are ready to purchase insurance.",
-    image: ProjectCUImg,
-    technologies: [
-      "React.js",
-      "TypeScript",
-      "Styled Components",
-      "Redux/RTK Query",
-    ],
-    url: "https://clientup.io/",
-    featured: true,
-  },
-  {
     title: "Contra",
     description: "Learning PIXI.js through recreating the old Contra game",
     image: ProjectContraImg,
@@ -214,41 +225,10 @@ export const PROJECTS = [
   },
 ];
 
-export const WORK_TIMELINE = [
-  {
-    timeline: `Oct 2020 - Jun 2021`,
-    title: `Mobile developer`,
-    highlightTitle: ` (React, React Native)`,
-    description: `I have worked on a variety of exciting projects where I honed my skills in mobile design by creating interfaces from Figma, implementing the FLUX architecture with React and Redux, building chat applications, and developing simple interactive games like the Schulte table, among others.`,
-  },
-  {
-    timeline: `Jun-Nov 2021`,
-    title: `Full-stack developer`,
-    highlightTitle: ` (React, Node.js)`,
-    description: `In this role, I gained valuable experience working on full-stack projects, including handling legacy code and developing project generators for blank templates. I also worked extensively with databases such as MongoDB and PostgreSQL, and utilized the Express.js framework to build efficient and scalable backend solutions.`,
-  },
-  {
-    timeline: `Nov 2021 - Aug 2024`,
-    title: `Front-end develoepr`,
-    highlightTitle: ` (React, Next, Svelte)`,
-    description: `In this role, I gained hands-on experience working with a wide range of projects and technologies, including`,
-    list: [
-      `CMS (Sanity.io) for managing content efficiently`,
-      `Developing simple yet effective landing pages`,
-      `Contributing to a large-scale project over the span of a year, collaborating with a global team`,
-      `Serving as the lead front-end developer for a company’s lead generation product`,
-      `Leading the SvelteKit front-end development for a platform that allowed teachers to book trips for their students`,
-      `Building a self-serve platform where agents could purchase and filter leads, track ROI, manage policies, and pipelines, and integrate with their existing tools`,
-      `Creating a website for booking plumbers in London, utilizing Zoho CRM and Prismic.io.`,
-    ],
-    afterList: `These experiences provided me with a strong foundation in project leadership, CMS management, and delivering user-focused solutions.`,
-  },
-];
-
 export const EXPERIENCES = [
   {
     title: "Mobile developer",
-    duration: "Oct 2020 - Jun 2021",
+    duration: "Oct 2020 - Nov 2021",
     description:
       "Worked on a variety of exciting projects where I honed my skills in mobile design by creating interfaces from Figma, implementing the FLUX architecture with React and Redux, building chat applications, and developing simple interactive games like the Schulte table, among others.",
     achievements: [
@@ -261,7 +241,7 @@ export const EXPERIENCES = [
   },
   {
     title: "Full-stack developer",
-    duration: "Jun 2021 - Nov 2021",
+    duration: "Dec 2021 - Dec 2022",
     description:
       "Gained valuable experience working on full-stack projects, including handling legacy code and developing project generators for blank templates. I also worked extensively with databases such as MongoDB and PostgreSQL, and utilized the Express.js framework to build efficient and scalable backend solutions.",
     achievements: [
@@ -280,7 +260,7 @@ export const EXPERIENCES = [
   },
   {
     title: "Front-end developer",
-    duration: "Nov 2021 - Aug 2024",
+    duration: "Dec 2022 - Aug 2024",
     description:
       "In this role, I gained hands-on experience working with a wide range of projects and technologies. These experiences provided me with a strong foundation in project leadership, CMS management, and delivering user-focused solutions.",
     achievements: [
@@ -298,6 +278,17 @@ export const EXPERIENCES = [
       "React Charts",
     ],
   },
+  {
+    title: `Front-end developer`,
+    duration: `Sep 2024 - Nov 2025`,
+    description:
+      "Developed and maintained the user interface for a hotel booking platform and its associated admin panel using a modern stack including React, Redux, Mui, and Antd. The work encompassed building a complex, customer-facing booking site and designing intuitive data management tables for the internal administration tool.",
+    achievements: [
+      `Improved website load speed by 15% for the main hotel booking platform by optimizing Redux state management and implementing React lazy loading`,
+      `Increased administrator efficiency by 25% by redesigning key data tables in the admin panel using Tanstack React-Table, added proper data caching, enabled faster filtering, sorting, and bulk editing of critical hotel and reservation data`,
+    ],
+    technologies: ["React.js", "Redux", "Antd", "Mui", "@tanstack/react-table"],
+  },
 ];
 
 export const EDUCATIONS = [
@@ -309,13 +300,6 @@ export const EDUCATIONS = [
     description:
       "Used to program microcontrollers for the quadrocopters. Gained a lot of knowledge about math, physics, and low-level programming",
   },
-];
-
-export const CERTIFICATIONS = [
-  "AWS Certified Cloud Practitioner",
-  "Google Analytics Certified",
-  "React Developer Certification",
-  "Accessibility Specialist (IAAP)",
 ];
 
 export const CONTACTS_FORM_URL =
