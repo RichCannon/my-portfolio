@@ -279,7 +279,7 @@ export const EXPERIENCES = [
     ],
   },
   {
-    title: `Front-end developer`,
+    title: "Front-end developer",
     duration: `Sep 2024 - Nov 2025`,
     description:
       "Developed and maintained the user interface for a hotel booking platform and its associated admin panel using a modern stack including React, Redux, Mui, and Antd. The work encompassed building a complex, customer-facing booking site and designing intuitive data management tables for the internal administration tool.",

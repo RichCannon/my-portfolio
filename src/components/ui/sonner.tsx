@@ -1,14 +1,47 @@
-import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { Toaster as Sonner } from "sonner";
 
 type ToasterProps = React.ComponentProps<typeof Sonner>;
+type SonnerTheme = NonNullable<ToasterProps["theme"]>;
+
+const resolveDocumentTheme = (): SonnerTheme => {
+  if (typeof document !== "undefined") {
+    return document.documentElement.classList.contains("dark")
+      ? "dark"
+      : "light";
+  }
+
+  return "light";
+};
+
+const useDocumentTheme = (): SonnerTheme => {
+  const [theme, setTheme] = useState<SonnerTheme>(() => resolveDocumentTheme());
+
+  useEffect(() => {
+    if (typeof document === "undefined") {
+      return;
+    }
+
+    const root = document.documentElement;
+    const observer = new MutationObserver(() => {
+      setTheme(resolveDocumentTheme());
+    });
+
+    observer.observe(root, { attributes: true, attributeFilter: ["class"] });
+    setTheme(resolveDocumentTheme());
+
+    return () => observer.disconnect();
+  }, []);
+
+  return theme;
+};
 
 const Toaster = ({ ...props }: ToasterProps) => {
-  const { theme = "system" } = useTheme();
+  const theme = useDocumentTheme();
 
   return (
     <Sonner
-      theme={theme as ToasterProps["theme"]}
+      theme={theme}
       className="toaster group"
       toastOptions={{
         classNames: {

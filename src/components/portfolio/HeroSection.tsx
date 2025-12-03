@@ -83,7 +83,7 @@ export function HeroSection() {
           >
             {SOCIAL_MEDIA.map(({ Icon, href, name }) => {
               return (
-                <Button variant="ghost" size="icon" asChild>
+                <Button key={name} variant="ghost" size="icon" asChild>
                   <a href={href} target="_blank" rel="noopener noreferrer">
                     <Icon className="h-5 w-5" />
                     <span className="sr-only">{name}</span>
